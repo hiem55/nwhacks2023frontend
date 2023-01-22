@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', serif;
+    font-family: 'Courier New', serif;
     background: var(--color-bg);
     color: var(--color-black);
     line-height: 1.5;

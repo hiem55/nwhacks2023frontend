@@ -12,6 +12,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.0em
 }
 
 #page {
@@ -22,6 +23,7 @@ input {
     margin-top: 0;
     width: 10em;
     margin-right: 180px;
+
 }
 
 p {
@@ -36,29 +38,79 @@ h5 {
     font-family: "Impact";
 }
 
-/*@keyframes typing {*/
-/*    from { width: 0 }*/
-/*    to { width: 100% }*/
-/*}*/
+/*
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+*/
 
-/*.typed-out {*/
-/*    overflow: hidden;*/
-/*    text-align: center;*/
-/*    border-right: .15em solid orange;*/
-/*    font-size: 160%;*/
-/*    font-family: "Impact";*/
-/*    width: 0;*/
-/*    animation:*/
-/*            typing 1s steps(4, end) forwards;*/
-/*}*/
+@keyframes colorChange {
+    0% {color: var(--color-1)}
+    32% {color: var(--color-1)}
+    33% {color: var(--color-2)}
+    65% {color: var(--color-2)}
+    66% {color: var(--color-3)}
+    99% {color: var(--color-3)}
+    100% {color: var(--color-1)}
+}
 
-/*.container {*/
-/*    display: inline-block;*/
-/*}*/
+.colorF {
+    font-size: 160%;
+    animation: colorChange 4s linear infinite;
+} 
+
+.container {
+    display: inline-block;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-13deg);
+    }
+    20% {
+        transform: rotateZ(8deg);
+    }
+    25% {
+        transform: rotateZ(-8deg);
+    }
+    30% {
+        transform: rotateZ(4deg);
+    }
+    35% {
+        transform: rotateZ(-2deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+}
+
 #button-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
 }
+
+#update {
+    animation: wiggle 2s linear infinite;
+    background-color: #472d63;
+    color: #ffffff;
+}
+
+#subscribeUser {
+    animation: wiggle 2s linear infinite;
+    background-color: #472d63;
+    color: #ffffff;
+}
+ 
+#subscribeLocation {
+    animation: wiggle 2s linear infinite;
+    background-color: #472d63;
+    color: #ffffff;
+}
+
 

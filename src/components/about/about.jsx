@@ -66,8 +66,9 @@ const About = () => {
     }
     return (
         <section data-section="about" id = "page">
+            <p id = "logged-in-text"> Current logged in user is...</p>
             <section id = "input-container">  
-                    <input id = "input-val"
+                    <input id = "input-val" placeholder="Enter ID here"
                 onKeyPress={(event) => {
                 if (!/[0-9]/.test(event.key)) {
                     event.preventDefault();
@@ -76,19 +77,19 @@ const About = () => {
                 />
             </section>
             <Stack direction="horizontal" gap={2} id="button-container">
-                <Button as="a" variant="primary" onClick={() => updateLocation()}>
-                    Update Location
+                <Button as="a" id = "update" onClick={() => updateLocation()}>
+                <b>Update Location</b>
 
                 </Button>
-                <Button as="a" variant="success" onClick={() => subscribeToUser()} >
-                    Subscribe to User
+                <Button as="a" id = "subscribeUser" onClick={() => subscribeToUser()} >
+                    <b>Subscribe to User</b>
                 </Button>
-                <Button as="a" variant="success" onClick={() => subscribeToLocation()} >
-                    Subscribe to Location
+                <Button as="a" id = "subscribeLocation" onClick={() => subscribeToLocation()} >
+                    <b>Subscribe to Location</b>
                 </Button>
             </Stack>
             <div className="container">
-                <div className="typed-out">About this App</div>
+                <div className= "colorF"><b>About this App</b></div>
             </div>
             {/*             <h5>About This Project</h5> */}
             <div className="container about_container">
