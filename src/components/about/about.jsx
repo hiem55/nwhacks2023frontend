@@ -7,19 +7,68 @@ import axios from 'axios';
 
 const About = () => {
     function updateLocation() {
-        var returnVal = prompt("Enter your location");
+        // keep querying until input is non-null
+        var returnVal = prompt("Enter your location: ");
+        while (!returnVal) {
+            returnVal = prompt("Enter your location: ");
+        }
+        
         axios({
             method: 'patch',
             withCredentials: false,
             url: 'http://localhost:8080/person/move',
-            params: { locationId: `1`, personId: `1` },
-        });
+            params: { locationName: returnVal, personId: '1' },
+        }); 
         console.log("entered location is: " + returnVal)
 
     }
-    function subscribe() {
 
+    function subscribeToUser() {
+        // prompt for username to subscribe to
+        var returnVal = prompt("Enter the username you would like to subscribe to: ")
+
+        // grab list of usernames
+        /*
+        axios({
+            method: 'get',
+            withCredentials: false,
+            url: 'http://localhost:8080/person/login/check',
+            params: { username: returnVal},
+        }).then((response) => {
+            if (response.data === false)
+        }) */
+        
+        axios({
+            method: 'patch',
+            withCredentials: false,
+            url: 'http://localhost:8080/location/subscribe',
+            params: { personId: `1`, subLocationIds: ['1']},
+        });
     }
+
+    function subscribeToLocation() {
+        // prompt for username to subscribe to
+        var returnVal = prompt("Enter the lpcation you would like to subscribe to: ")
+
+        // grab list of usernames
+        /*
+        axios({
+            method: 'get',
+            withCredentials: false,
+            url: 'http://localhost:8080/person/login/check',
+            params: { username: returnVal},
+        }).then((response) => {
+            if (response.data === false)
+        }) *./
+        
+        axios({
+            method: 'patch',
+            withCredentials: false,
+            url: 'http://localhost:8080/location/subscribe',
+            params: { personId: `1`, subLocationIds: ['1']},
+        });
+    }
+
     return (
         <section data-section="about">
             <Stack direction="horizontal" gap={2} id="button-container">
@@ -27,8 +76,11 @@ const About = () => {
                     Update Location
 
                 </Button>
-                <Button as="a" variant="success" onClick={() => subscribe()} >
-                    Subscribe
+                <Button as="a" variant="success" onClick={() => subscribeToUser()} >
+                    Subscribe to User
+                </Button>
+                <Button as="a" variant="success" onClick={() => subscribeToLocation()} >
+                    Subscribe to Location
                 </Button>
             </Stack>
             <div className="container">
