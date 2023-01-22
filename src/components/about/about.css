@@ -1,10 +1,27 @@
 section {
-    #text-align: center;
-    #font-size: 160%;
+    text-align: center;
+    font-size: 160%;
     color: #ffffff;
     margin-left: 200px;
     padding: 1px 16px;
     height: 1000px;
+}
+
+#input-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page {
+    margin-top: 0;
+}
+
+input {
+    margin-top: 0;
+    width: 10em;
+    margin-right: 180px;
 }
 
 p {
@@ -44,3 +61,4 @@ h5 {
     justify-content: center;
     margin-top: 20px;
 }
+

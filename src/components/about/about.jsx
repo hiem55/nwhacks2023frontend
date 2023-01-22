@@ -12,12 +12,15 @@ const About = () => {
         while (!returnVal) {
             returnVal = prompt("Enter your location: ");
         }
+
+        const input = document.getElementById("input-val")
+        let userId = input.value;
         
         axios({
             method: 'patch',
             withCredentials: false,
             url: 'http://localhost:8080/person/move',
-            params: { locationString: returnVal, personId: '1' },
+            params: { locationString: returnVal, personId: userId },
         }); 
         console.log("entered location is: " + returnVal)
 
@@ -27,14 +30,14 @@ const About = () => {
         // prompt for username to subscribe to
         var returnVal = prompt("Enter the username ids you would like to subscribe to: ")
 
-        // grab list of usernames
-
+        const input = document.getElementById("input-val")
+        let userId = input.value;
         
         axios({
             method: 'patch',
             withCredentials: false,
             url: 'http://localhost:8080/person/subscribe',
-            params: { personId: `1`, subscribePersonIds: returnVal},
+            params: { personId: userId, subscribePersonIds: returnVal},
         });
     }
 
@@ -49,16 +52,29 @@ const About = () => {
         }
 
         
+        const input = document.getElementById("input-val")
+        let userId = input.value;
+
+        
         axios({
             method: 'patch',
             withCredentials: false,
             url: 'http://localhost:8080/location/subscribe',
-            params: { personId: `1`, locationStrings: returnVal},
+            params: { personId: userId, locationStrings: returnVal},
         });
 
     }
     return (
-        <section data-section="about">
+        <section data-section="about" id = "page">
+            <section id = "input-container">  
+                    <input id = "input-val"
+                onKeyPress={(event) => {
+                if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                }
+                }}
+                />
+            </section>
             <Stack direction="horizontal" gap={2} id="button-container">
                 <Button as="a" variant="primary" onClick={() => updateLocation()}>
                     Update Location
