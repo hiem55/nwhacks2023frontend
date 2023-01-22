@@ -13,7 +13,7 @@
     --color-bg-variant: #AA96DA;
     --color-primary: #C5FAD5;
     --color-primary-variant: #FFFFD2;
-    --color-white: #fff;
+    --color-black: black;
     --color-light: rgba(255, 255, 255, 0.6);
 
     --transition: all 400ms ease;
@@ -26,7 +26,7 @@
 body {
     font-family: 'Comic Sans MS', serif;
     background: var(--color-bg);
-    color: var(--color-white);
+    color: var(--color-black);
     line-height: 1.5;
 }
 
@@ -55,7 +55,7 @@ section {
 }
 
 .btn:hover {
-    background: var(--color-white);
+    background: var(--color-black);
     color: var(--color-bg);
     border-color: transparent;
 }
