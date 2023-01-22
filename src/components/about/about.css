@@ -1,4 +1,3 @@
-
 section {
     #text-align: center;
     #font-size: 160%;
@@ -8,13 +7,13 @@ section {
     height: 1000px;
 }
 
-p{
+p {
     color: #ffffff;
     font-family: "Courier New";
     font-size: 100%;
 }
 
-h5{
+h5 {
 
     font-size: 160%;
     font-family: "Impact";
@@ -39,3 +38,9 @@ h5{
 /*.container {*/
 /*    display: inline-block;*/
 /*}*/
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
