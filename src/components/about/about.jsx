@@ -4,7 +4,10 @@ import './about.css'
 const About = () => {
     return (
         <section data-section="about">
-            <h5>About This Project</h5>
+                <div className="container">
+              <div className="typed-out">About this App</div>
+                </div>
+{/*             <h5>About This Project</h5> */}
             <div className="container about_container">
             <div className="colorlib-narrow-content">
                         <div className="row">

@@ -1,7 +1,32 @@
+@keyframes rotation {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    50% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
 header {
-    padding-top: 5rem;
+    padding-top: 4rem;
     overflow: hidden;
     margin-left: 200px;
+}
+img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3.5s;
 }
 
 /* ==================== HEADER SOCIALS ==================== */
@@ -19,5 +44,5 @@ header {
     content: '';
     width: 1px;
     height: 2rem;
-    background: var(--color-primary);
+    background: white;
 }

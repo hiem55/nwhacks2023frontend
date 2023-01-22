@@ -2,19 +2,40 @@
 section {
     #text-align: center;
     #font-size: 160%;
-    color: black;
+    color: #ffffff;
     margin-left: 200px;
     padding: 1px 16px;
     height: 1000px;
 }
 
 p{
+    color: #ffffff;
     font-family: "Courier New";
     font-size: 100%;
 }
 
 h5{
-    text-align: center;
+
     font-size: 160%;
     font-family: "Impact";
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.typed-out {
+    overflow: hidden;
+    text-align: center;
+    border-right: .15em solid orange;
+    font-size: 160%;
+    font-family: "Impact";
+    width: 0;
+    animation:
+            typing 1s steps(4, end) forwards;
+}
+
+.container {
+    display: inline-block;
 }

@@ -3,11 +3,12 @@ import './body.css'
 
 const body = () => {
     return (
-        <body>  <div class="sidebar">
-                </div>
-                <div class="body-text">
-                </div>
-</body>
+        <div>
+            <div className="sidebar">
+            </div>
+            <div className="body-text">
+            </div>
+        </div>
     )
 }
 
