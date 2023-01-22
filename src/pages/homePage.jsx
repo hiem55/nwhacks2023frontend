@@ -11,10 +11,11 @@ const Home = () => {
         <>
             <Header />
             <About />
-            <Footer />
             <Body />
-            <Sidebar/>
-          </>
+            <Footer />
+            <Sidebar />
+
+        </>
     )
 }
 

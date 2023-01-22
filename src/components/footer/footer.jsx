@@ -8,6 +8,9 @@ const footer = () => {
                 <h5> </h5>
 
             </div>
+            <div className="footer_copyright">
+                <small>&copy; WHERE U @ All rights reserved. 2023</small>
+            </div>
         </footer>
     )
 }
