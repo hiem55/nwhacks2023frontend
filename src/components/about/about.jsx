@@ -3,6 +3,7 @@ import './about.css'
 import Button from 'react-bootstrap/Button';
 import { Stack } from 'react-bootstrap';
 import axios from 'axios';
+import { hasSubscribers } from 'diagnostics_channel';
 
 const About = () => {
     function updateLocation() {
@@ -13,18 +14,21 @@ const About = () => {
             url: 'http://localhost:8080/person/move',
             params: { locationId: `1`, personId: `1` },
         });
-        console.log("enetered location is: " + returnVal)
+        console.log("entered location is: " + returnVal)
+
+    }
+    function subscribe() {
 
     }
     return (
         <section data-section="about">
             <Stack direction="horizontal" gap={2} id="button-container">
                 <Button as="a" variant="primary" onClick={() => updateLocation()}>
-                    Button as link
+                    Update Location
 
                 </Button>
-                <Button as="a" variant="success" >
-                    Button as link
+                <Button as="a" variant="success" onClick={() => subscribe()} >
+                    Subscribe
                 </Button>
             </Stack>
             <div className="container">
