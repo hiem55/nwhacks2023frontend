@@ -3,7 +3,7 @@ import './about.css'
 import Button from 'react-bootstrap/Button';
 import { Stack } from 'react-bootstrap';
 import axios from 'axios';
-import { hasSubscribers } from 'diagnostics_channel';
+
 
 const About = () => {
     function updateLocation() {
