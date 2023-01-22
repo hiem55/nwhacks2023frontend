@@ -17,7 +17,7 @@ const About = () => {
             method: 'patch',
             withCredentials: false,
             url: 'http://localhost:8080/person/move',
-            params: { locationName: returnVal, personId: '1' },
+            params: { locationString: returnVal, personId: '1' },
         }); 
         console.log("entered location is: " + returnVal)
 
@@ -25,50 +25,38 @@ const About = () => {
 
     function subscribeToUser() {
         // prompt for username to subscribe to
-        var returnVal = prompt("Enter the username you would like to subscribe to: ")
+        var returnVal = prompt("Enter the username ids you would like to subscribe to: ")
 
         // grab list of usernames
-        /*
-        axios({
-            method: 'get',
-            withCredentials: false,
-            url: 'http://localhost:8080/person/login/check',
-            params: { username: returnVal},
-        }).then((response) => {
-            if (response.data === false)
-        }) */
+
         
         axios({
             method: 'patch',
             withCredentials: false,
-            url: 'http://localhost:8080/location/subscribe',
-            params: { personId: `1`, subLocationIds: ['1']},
+            url: 'http://localhost:8080/person/subscribe',
+            params: { personId: `1`, subscribePersonIds: returnVal},
         });
     }
 
     function subscribeToLocation() {
         // prompt for username to subscribe to
-        var returnVal = prompt("Enter the lpcation you would like to subscribe to: ")
+        // var returnVal = prompt("Enter the lpcation you would like to subscribe to: ")
 
         // grab list of usernames
-        /*
-        axios({
-            method: 'get',
-            withCredentials: false,
-            url: 'http://localhost:8080/person/login/check',
-            params: { username: returnVal},
-        }).then((response) => {
-            if (response.data === false)
-        }) *./
+        var returnVal = prompt("Enter your location: ");
+        while (!returnVal) {
+            returnVal = prompt("Enter your location: ");
+        }
+
         
         axios({
             method: 'patch',
             withCredentials: false,
             url: 'http://localhost:8080/location/subscribe',
-            params: { personId: `1`, subLocationIds: ['1']},
+            params: { personId: `1`, locationStrings: returnVal},
         });
-    }
 
+    }
     return (
         <section data-section="about">
             <Stack direction="horizontal" gap={2} id="button-container">
