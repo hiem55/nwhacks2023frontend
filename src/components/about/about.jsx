@@ -66,7 +66,7 @@ const About = () => {
     }
     return (
         <section data-section="about" id = "page">
-            <p id = "logged-in-text"> Current logged in user is...</p>
+            <p id = "logged-in-text"><b> Current logged in user is...</b></p>
             <section id = "input-container">  
                     <input id = "input-val" placeholder="Enter ID here"
                 onKeyPress={(event) => {
@@ -88,7 +88,7 @@ const About = () => {
                     <b>Subscribe to Location</b>
                 </Button>
             </Stack>
-            <div className="container">
+            <div className="cont">
                 <div className= "colorF"><b>About this App</b></div>
             </div>
             {/*             <h5>About This Project</h5> */}
@@ -100,8 +100,10 @@ const About = () => {
                                 <div className="col-md-12">
                                     <div className="about-desc">
                                         <div className="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                            <p>Worry about apps tracking all your location information and storing the data? <br />
-                                                Our goal is to create an app that gives you full control of sharing information about your whereabouts </p>
+                                            <div class = "contain">
+                                            <p class = "aboutP"><b>Worry about apps tracking all your location information and storing the data? <br />
+                                                Our goal is to create an app that gives you full control of sharing information about your whereabouts </b></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
