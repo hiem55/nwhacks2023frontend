@@ -20,22 +20,22 @@ h5{
     font-family: "Impact";
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+/*@keyframes typing {*/
+/*    from { width: 0 }*/
+/*    to { width: 100% }*/
+/*}*/
 
-.typed-out {
-    overflow: hidden;
-    text-align: center;
-    border-right: .15em solid orange;
-    font-size: 160%;
-    font-family: "Impact";
-    width: 0;
-    animation:
-            typing 1s steps(4, end) forwards;
-}
+/*.typed-out {*/
+/*    overflow: hidden;*/
+/*    text-align: center;*/
+/*    border-right: .15em solid orange;*/
+/*    font-size: 160%;*/
+/*    font-family: "Impact";*/
+/*    width: 0;*/
+/*    animation:*/
+/*            typing 1s steps(4, end) forwards;*/
+/*}*/
 
-.container {
-    display: inline-block;
-}
+/*.container {*/
+/*    display: inline-block;*/
+/*}*/

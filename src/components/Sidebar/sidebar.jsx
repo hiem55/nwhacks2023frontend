@@ -4,12 +4,13 @@ import {Link} from "react-router-dom"
 
 const sidebar = () => {
     return (
-        <div className="sidebar">
-            <Link className="active" href=" ">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/about">About</Link>
-            <Link href="/sign_up">Sign In</Link>
-            <Link href="/sign_up">SignUp</Link>
+        <div class="sidebar">
+            <a class="active" href=" ">Home</a>
+{/*             <a href=./about>About</a> */}
+{/*             <a href="#sign up">Sign In</a> */}
+            <li>
+            <a href="/signUp">SignUp</a>
+            </li>
         </div>
     )
 }
